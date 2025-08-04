@@ -12,14 +12,14 @@ const Hero = () => {
     return (
         <section className="mt-10 px-4 md:px-0">
            
-            <div className="relative w-full h-48 sm:h-64 md:h-screen">
+            <div className="relative w-full mt-6 md:mt-0 px-4 md:px-0">
                 <video
                     src={topVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto md:h-screen object-cover mt-5"
                 />
             </div>
 
@@ -34,14 +34,14 @@ const Hero = () => {
             </div>
 
            
-            <div className="relative w-full h-48 sm:h-64 md:h-screen mt-10">
+            <div className="relative w-full mt-6 md:mt-0 px-4 md:px-0">
                 <video
                     src={bottomVideo}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto md:h-screen mt-5 object-cover"
                 />
             </div>
         </section>

@@ -12,7 +12,7 @@ const Header = () => {
                 Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 instant cashback‡ on selected products with eligible cards.
             </p>
 
-            {/* MP4 Video (full height on medium screens) */}
+            {/* MP4 Video (full height on medium screens)
             <div className="relative w-full h-48 sm:h-64 md:h-screen mt-6 md:mt-0 px-4 md:px-0">
                 <video
                     src={iphoneVideo}
@@ -20,9 +20,21 @@ const Header = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover mt-5"
+                    className="w-full h-full sm:h-64 object-cover mt-5"
                 />
-            </div>
+            </div> */}
+
+            <div className="relative w-full mt-6 md:mt-0 px-4 md:px-0">
+    <video
+        src={iphoneVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-auto md:h-screen object-cover mt-5"
+    />
+</div>
+
 
             {/* Responsive Image Layout */}
             <div className="mt-10 grid grid-cols-1 gap-6 px-4">

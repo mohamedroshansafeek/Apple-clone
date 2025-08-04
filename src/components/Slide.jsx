@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 const images = [
   "/src/assets/images/movie-01.png",
   "/src/assets/images/movie-02.png",
@@ -14,10 +13,10 @@ const images = [
   "/src/assets/images/movie-10.png",
 ];
 
-const Slide = () => {
+const Slideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //  Auto-slide logic
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -25,9 +24,9 @@ const Slide = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Render images
+
   return (
-    <div className="relative w-full h-64 md:h-screen overflow-hidden mt-10">
+    <div className="relative w-full h-64 sm:h-80 md:h-screen overflow-hidden mt-5">
       {images.map((img, index) => (
         <img
           key={index}
@@ -39,7 +38,10 @@ const Slide = () => {
         />
       ))}
     </div>
+   
+
   );
 };
 
-export default Slide;
+export default Slideshow;
+
