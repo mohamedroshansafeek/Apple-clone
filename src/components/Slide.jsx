@@ -23,18 +23,20 @@ const Slideshow = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden mt-5">
-      {images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`slide-${index}`}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
-    </div>
+   
+    <div className="relative w-full h-64 sm:h-80 md:h-screen overflow-hidden mt-5">
+  {images.map((img, index) => (
+    <img
+      key={index}
+      src={img}
+      alt={`slide-${index}`}
+      className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        index === currentIndex ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  ))}
+</div>
+
   );
 };
 
